@@ -48,3 +48,25 @@ void factorize_file(char *file_path)
 
 	fclose(file);
 }
+
+
+/**
+ * main - Entry point of program.
+ * @argc: the number of command line args
+ * @argv: array containing command line args.
+ * Return: 0on success.
+ */
+
+int main(int argc, char *argv[])
+{
+	if (argc != 2)
+	{
+		fprintf(stderr, "Usage: % <file>\n", argv[0]);
+	exit(EXIT_FAILURE);
+	}
+
+	char *file_path = argv[1];
+	factorize_file(file_path);
+
+	return (0);
+}
