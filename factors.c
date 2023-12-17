@@ -9,23 +9,37 @@ void factorize_number(int number)
 {
 	printf("%d=", number);
 
-	for (int i = 2; i <= number; i++)
-	{
-		while (number % i == 0)
-		{
-			printf("%d", i);
-			number /= i;
+		while (number % 2 == 0)
+			
+			printf("2");
+			number /= 2;
 
 			if (number > 1)
-			{
+				
 				printf("*");
-			}
-		}
-	}
-	printf("\n");
+
 }
 
+for (int i = 3; i <= sqrt(number); i += 2)
+{
+	while (number % i == 0)
+	{
+		printf("%s", i);
+		number /= i;
 
+		if (number > 1)
+		{
+			printf("*");
+		}
+	}
+}
+
+if (number > 2)
+{
+	printf("%d", number);
+
+	printf("\n");
+}	
 /**
  * factorize_file - factorizes numbers from a file and prints the result.
  * @file_path: the path to the file containing numbers.
