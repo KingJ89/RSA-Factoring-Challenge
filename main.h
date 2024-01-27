@@ -6,7 +6,6 @@
 
 // Function declarations for factors.c
 void factorize_number(int number);
-void factorize_file(char *file_path);
 
 // Function declarations for rsa.c
 int is_prime(int n);
